@@ -1,0 +1,408 @@
+{
+  "best_model": "LogisticRegression",
+  "symptom_columns": [
+    "fever",
+    "cough",
+    "fatigue",
+    "headache",
+    "sore_throat",
+    "runny_nose",
+    "shortness_of_breath",
+    "chest_pain",
+    "nausea",
+    "vomiting",
+    "diarrhea",
+    "abdominal_pain",
+    "joint_pain",
+    "muscle_pain",
+    "rash",
+    "chills",
+    "sweating",
+    "weight_loss",
+    "increased_thirst",
+    "frequent_urination",
+    "blurred_vision",
+    "dizziness",
+    "high_blood_pressure_history",
+    "loss_of_appetite",
+    "yellow_skin",
+    "dark_urine",
+    "sensitivity_to_light",
+    "night_sweats",
+    "wheezing",
+    "swollen_lymph_nodes"
+  ],
+  "disease_classes": [
+    "Allergy",
+    "Asthma",
+    "Common Cold",
+    "Diabetes",
+    "Gastroenteritis",
+    "Heart Disease",
+    "Hepatitis",
+    "Hypertension",
+    "Influenza (Flu)",
+    "Malaria",
+    "Migraine",
+    "Pneumonia",
+    "Tuberculosis",
+    "Typhoid"
+  ],
+  "model_comparison": {
+    "LogisticRegression": {
+      "test_accuracy": 0.8583,
+      "macro_f1": 0.858,
+      "cv_mean_accuracy": 0.8781,
+      "cv_std": 0.0081
+    },
+    "RandomForest": {
+      "test_accuracy": 0.8357,
+      "macro_f1": 0.8359,
+      "cv_mean_accuracy": 0.8555,
+      "cv_std": 0.0167
+    },
+    "GradientBoosting": {
+      "test_accuracy": 0.8524,
+      "macro_f1": 0.8514,
+      "cv_mean_accuracy": 0.8652,
+      "cv_std": 0.0119
+    },
+    "SVM (RBF)": {
+      "test_accuracy": 0.8607,
+      "macro_f1": 0.8604,
+      "cv_mean_accuracy": 0.8748,
+      "cv_std": 0.0091
+    },
+    "KNN": {
+      "test_accuracy": 0.8476,
+      "macro_f1": 0.8479,
+      "cv_mean_accuracy": 0.864,
+      "cv_std": 0.0109
+    }
+  },
+  "classification_report": {
+    "Allergy": {
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.8333333333333334,
+      "support": 60.0
+    },
+    "Asthma": {
+      "precision": 0.8548387096774194,
+      "recall": 0.8833333333333333,
+      "f1-score": 0.8688524590163934,
+      "support": 60.0
+    },
+    "Common Cold": {
+      "precision": 0.8333333333333334,
+      "recall": 0.9166666666666666,
+      "f1-score": 0.873015873015873,
+      "support": 60.0
+    },
+    "Diabetes": {
+      "precision": 1.0,
+      "recall": 0.9833333333333333,
+      "f1-score": 0.9915966386554622,
+      "support": 60.0
+    },
+    "Gastroenteritis": {
+      "precision": 0.8333333333333334,
+      "recall": 0.9166666666666666,
+      "f1-score": 0.873015873015873,
+      "support": 60.0
+    },
+    "Heart Disease": {
+      "precision": 0.847457627118644,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.8403361344537815,
+      "support": 60.0
+    },
+    "Hepatitis": {
+      "precision": 0.9482758620689655,
+      "recall": 0.9166666666666666,
+      "f1-score": 0.9322033898305084,
+      "support": 60.0
+    },
+    "Hypertension": {
+      "precision": 0.8095238095238095,
+      "recall": 0.85,
+      "f1-score": 0.8292682926829268,
+      "support": 60.0
+    },
+    "Influenza (Flu)": {
+      "precision": 0.8181818181818182,
+      "recall": 0.75,
+      "f1-score": 0.782608695652174,
+      "support": 60.0
+    },
+    "Malaria": {
+      "precision": 0.7692307692307693,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.8,
+      "support": 60.0
+    },
+    "Migraine": {
+      "precision": 0.8793103448275862,
+      "recall": 0.85,
+      "f1-score": 0.864406779661017,
+      "support": 60.0
+    },
+    "Pneumonia": {
+      "precision": 0.8867924528301887,
+      "recall": 0.7833333333333333,
+      "f1-score": 0.831858407079646,
+      "support": 60.0
+    },
+    "Tuberculosis": {
+      "precision": 0.8870967741935484,
+      "recall": 0.9166666666666666,
+      "f1-score": 0.9016393442622951,
+      "support": 60.0
+    },
+    "Typhoid": {
+      "precision": 0.8333333333333334,
+      "recall": 0.75,
+      "f1-score": 0.7894736842105263,
+      "support": 60.0
+    },
+    "accuracy": 0.8583333333333333,
+    "macro avg": {
+      "precision": 0.8595743929275773,
+      "recall": 0.8583333333333333,
+      "f1-score": 0.8579720646335579,
+      "support": 840.0
+    },
+    "weighted avg": {
+      "precision": 0.8595743929275773,
+      "recall": 0.8583333333333333,
+      "f1-score": 0.8579720646335579,
+      "support": 840.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      50,
+      0,
+      3,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      3,
+      1
+    ],
+    [
+      2,
+      53,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      2,
+      1,
+      0
+    ],
+    [
+      2,
+      1,
+      55,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      59,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      55,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      3
+    ],
+    [
+      0,
+      3,
+      0,
+      0,
+      0,
+      50,
+      0,
+      5,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      3,
+      0,
+      0,
+      0,
+      1,
+      1,
+      55,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      0,
+      3,
+      0,
+      51,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      45,
+      10,
+      1,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      9,
+      50,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      3,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      3,
+      0,
+      1,
+      51,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      3,
+      1,
+      0,
+      0,
+      3,
+      0,
+      1,
+      0,
+      1,
+      0,
+      47,
+      2,
+      2
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0,
+      1,
+      0,
+      0,
+      55,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      10,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      45
+    ]
+  ]
+}
